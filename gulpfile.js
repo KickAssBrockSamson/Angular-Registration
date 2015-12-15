@@ -31,7 +31,6 @@ if (env==='development') {
   sassStyle = 'compressed';
 }
 
-
 coffeeSources = ['components/coffee/tagline.coffee'];
 jsSources = [
   'components/scripts/rclick.js',
@@ -39,17 +38,19 @@ jsSources = [
   'components/scripts/tagline.js',
   'components/scripts/template.js',
   // Angular
-  'components/angular/angular-animate.min.js',
-  //'components/angular/angular-animate.min.js.map',
-  'components/angular/angular-route.min.js',
-  //'components/angular/angular-route.min.js.map',
   'components/angular/angular.min.js',
-  //'components/angular/angular.min.js.map'
+  'components/angular/angular-animate.min.js',
+  'components/angular/angular-route.min.js',
+  //'components/angular/angular-animate.min.js.map',
+  //'components/angular/angular-route.min.js.map',
+  //'components/angular/angular.min.js.map',
   'components/scripts/app.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 jsonSources = [outputDir + 'js/*.json'];
+
+
 
 gulp.task('coffee', function() {
   gulp.src(coffeeSources)
@@ -68,14 +69,15 @@ gulp.task('js', function() {
 });
 
 gulp.task('compass', function() {
+  tmpOutputDir = outputDir+'css';
   gulp.src(sassSources)
     .pipe(compass({
+      css: outputDir+'css',
       sass: 'components/sass',
       image: outputDir + 'images',
       style: sassStyle
     })
     .on('error', gutil.log))
-    .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
 
@@ -120,4 +122,4 @@ gulp.task('json', function() {
     .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'images', 'connect', 'watch']);
+gulp.task('default', ['html', 'json', 'coffee', 'js','compass', 'images', 'connect', 'watch']);

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A project to showcase Angular Registration",
   "repository": {
-    "type": "git",
+    "type": "git"
   },
   "author": "Travis E Mikolay",
   "devDependencies": {
