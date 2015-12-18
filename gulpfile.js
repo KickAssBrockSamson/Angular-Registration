@@ -38,19 +38,20 @@ jsSources = [
   'components/scripts/tagline.js',
   'components/scripts/template.js',
   // Angular
-  'components/angular/angular.min.js',
-  'components/angular/angular-animate.min.js',
-  'components/angular/angular-route.min.js',
-  //'components/angular/angular-animate.min.js.map',
-  //'components/angular/angular-route.min.js.map',
-  //'components/angular/angular.min.js.map',
-  'components/scripts/app.js'
+  'components/angular/angular.js',
+  'components/angular/angular-animate.js',
+  'components/angular/angular-route.js',
+  // Angular Fire - Firebase.com
+
+  // My Angular Files
+  'components/scripts/app.js',
+  'components/scripts/services/authentication.js',
+  'components/scripts/controllers/registration.js',
+  'components/scripts/controllers/success.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 jsonSources = [outputDir + 'js/*.json'];
-
-
 
 gulp.task('coffee', function() {
   gulp.src(coffeeSources)
@@ -85,7 +86,7 @@ gulp.task('watch', function() {
   gulp.watch(coffeeSources, ['coffee']);
   gulp.watch(jsSources, ['js']);
   gulp.watch('components/sass/*.scss', ['compass']);
-  gulp.watch('builds/development/*.html', ['html']);
+  gulp.watch('builds/development/**/*.html', ['html']);
   gulp.watch('builds/development/js/*.json', ['json']);
   gulp.watch('builds/development/images/**/*.*', ['images']);
 });
@@ -98,7 +99,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('builds/development/*.html')
+  gulp.src('builds/development/**/*.html')
     .pipe(gulpif(env === 'production', minifyHTML()))
     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())

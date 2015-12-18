@@ -66,7 +66,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 3, ../../../components/sass/_base.scss */
 body {
-  background: #eddbba;
   font-family: "Inika", serif;
   font-size: 1.1em;
 }
@@ -380,4 +379,775 @@ section {
   -moz-box-shadow: black 5px 5px 12px;
   -webkit-box-shadow: black 5px 5px 12px;
   box-shadow: black 5px 5px 12px;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* line 24, ../../../components/sass/style.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 27, ../../../components/sass/style.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Reset Styles */
+/* line 32, ../../../components/sass/style.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 52, ../../../components/sass/style.scss */
+html {
+  line-height: 1;
+}
+
+/* line 55, ../../../components/sass/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 58, ../../../components/sass/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 62, ../../../components/sass/style.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 67, ../../../components/sass/style.scss */
+q, blockquote {
+  quotes: none;
+}
+
+/* line 70, ../../../components/sass/style.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 74, ../../../components/sass/style.scss */
+a img {
+  border: none;
+}
+
+/* line 77, ../../../components/sass/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 80, ../../../components/sass/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+/* line 88, ../../../components/sass/style.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 94, ../../../components/sass/style.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 98, ../../../components/sass/style.scss */
+html {
+  background-color: #F7F7F7;
+  min-height: 100%;
+  height: auto;
+}
+
+/* line 104, ../../../components/sass/style.scss */
+body {
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #555459;
+  line-height: 1.5rem;
+  *zoom: 1;
+}
+
+/* line 113, ../../../components/sass/style.scss */
+.card {
+  background: white;
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px;
+  text-align: center;
+  position: relative;
+  opacity: .95;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media all and (max-width: 400px) {
+  /* line 129, ../../../components/sass/style.scss */
+  main {
+    width: 100%;
+  }
+}
+/* line 134, ../../../components/sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', serif;
+  font-weight: 100;
+  text-shadow: 1px 1px white;
+}
+
+/* line 140, ../../../components/sass/style.scss */
+a {
+  color: #2D8BCF;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+/* line 145, ../../../components/sass/style.scss */
+header {
+  margin-bottom: 20px;
+}
+
+/* line 149, ../../../components/sass/style.scss */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 700;
+  font-family: Lato,appleLogo,sans-serif;
+  margin: 0 0 1rem;
+}
+
+/* line 160, ../../../components/sass/style.scss */
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 90%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* line 168, ../../../components/sass/style.scss */
+h3 {
+  margin-top: 0;
+  line-height: 110%;
+  margin-bottom: 5px;
+}
+
+/* line 177, ../../../components/sass/style.scss */
+a.small {
+  line-height: 100%;
+  font-size: .9rem;
+}
+
+/* Form Styles */
+/* line 184, ../../../components/sass/style.scss */
+input {
+  width: 100%;
+  display: inline-block;
+  font-weight: 100;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #475B62;
+  border: 1px solid #C5C5C5;
+  border-radius: 4px;
+  outline: 0;
+}
+
+/* line 198, ../../../components/sass/style.scss */
+input[type=radio] {
+  width: auto;
+}
+
+/* line 203, ../../../components/sass/style.scss */
+.ng-enter.ng-enter-active,
+.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+/* line 210, ../../../components/sass/style.scss */
+.ng-leave.ng-leave-active,
+.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 217, ../../../components/sass/style.scss */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-size: 400;
+  line-height: 140%;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #C61C6F;
+  color: white;
+  background-color: #2D8BCF;
+  background-size: 18px 18px;
+  min-width: 28px;
+  min-height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 247, ../../../components/sass/style.scss */
+.btn .btn-left {
+  float: left;
+}
+
+/* line 248, ../../../components/sass/style.scss */
+.btn .btn-right {
+  float: right;
+}
+
+/* line 249, ../../../components/sass/style.scss */
+.btn:hover {
+  background-color: #DC322F;
+}
+
+/* line 251, ../../../components/sass/style.scss */
+.btn-list {
+  background-image: url(../images/icons/icon_list.png);
+}
+
+/* line 252, ../../../components/sass/style.scss */
+.btn-checkin {
+  background-color: #859835;
+  background-image: url(../images/icons/icon_checkmark.png);
+}
+
+/* line 253, ../../../components/sass/style.scss */
+.btn-delete {
+  background-color: #C94C24;
+  background-image: url(../images/icons/icon_trash.png);
+}
+
+/* line 254, ../../../components/sass/style.scss */
+.btn-love {
+  background-image: url(../images/icons/icon_heart.png);
+}
+
+/* line 255, ../../../components/sass/style.scss */
+.btn-email {
+  background-image: url(../images/icons/icon_email.png);
+}
+
+/* line 256, ../../../components/sass/style.scss */
+.btn-meeting {
+  background-image: url(../images/icons/icon_meeting.png);
+}
+
+/* line 258, ../../../components/sass/style.scss */
+.btn-pick {
+  background: #2D8BCF url(../images/icons/icon_dice.png) 5px center no-repeat;
+  background-size: 20px 20px;
+  padding: 5px 5px 5px 30px;
+  font-size: .8em;
+  margin: 0 auto;
+}
+
+/* line 266, ../../../components/sass/style.scss */
+.btn-reset {
+  background: #CB4B19 url(../images/icons/icon_reset.png) 5px center no-repeat;
+  background-size: 20px 20px;
+  padding: 5px 5px 5px 50px;
+}
+
+/*buttons*/
+/* line 275, ../../../components/sass/style.scss */
+fieldset {
+  margin: 10px 0;
+}
+
+/* line 279, ../../../components/sass/style.scss */
+.textintro h1 {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* line 285, ../../../components/sass/style.scss */
+.search {
+  background: #F5F5F5;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px 30px;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+/* line 297, ../../../components/sass/style.scss */
+.search h2 {
+  color: #124E61;
+  margin-bottom: 10px;
+}
+
+/* line 302, ../../../components/sass/style.scss */
+.search select {
+  font-size: 1rem;
+  padding: 10px 0 10px 15px;
+  color: #475B62;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 310, ../../../components/sass/style.scss */
+.search input[type="text"] {
+  margin-bottom: 10px;
+}
+
+/* line 314, ../../../components/sass/style.scss */
+.search input[type="checkbox"] {
+  display: inline;
+  background-color: #ddd;
+  border: 1px solid #C5C5C5;
+  display: inline-block;
+  margin-right: 15px;
+  -webkit-appearance: none;
+}
+
+/* line 323, ../../../components/sass/style.scss */
+.search label {
+  font-size: 1rem;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  color: #576E75;
+}
+
+/* line 329, ../../../components/sass/style.scss */
+.search .formgroup {
+  float: left;
+  width: 33%;
+}
+
+/* line 334, ../../../components/sass/style.scss */
+.search .buttons {
+  display: block;
+  width: 33%;
+  float: right;
+  text-align: right;
+}
+
+@media all and (max-width: 700px) {
+  /* line 342, ../../../components/sass/style.scss */
+  .search .formgroup {
+    width: 50%;
+  }
+
+  /* line 346, ../../../components/sass/style.scss */
+  .search .buttons {
+    width: 100%;
+    float: right;
+  }
+}
+@media all and (max-width: 550px) {
+  /* line 353, ../../../components/sass/style.scss */
+  .search .formgroup {
+    width: 100%;
+  }
+}
+/* user List Styles */
+/* line 360, ../../../components/sass/style.scss */
+.userlist {
+  width: 100%;
+  margin: 0 auto;
+  opacity: .95;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+/* line 368, ../../../components/sass/style.scss */
+.userlist ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 373, ../../../components/sass/style.scss */
+.userlist li {
+  width: 50%;
+  float: left;
+  padding: 12px;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 1px solid transparent;
+}
+
+/* line 385, ../../../components/sass/style.scss */
+.userlist li:hover {
+  border: 1px solid #C5C5C5;
+  border-radius: 4px;
+}
+
+/* line 390, ../../../components/sass/style.scss */
+.userlist li.expanded {
+  width: 100%;
+}
+
+/* line 394, ../../../components/sass/style.scss */
+.userlist li.expanded form {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* line 399, ../../../components/sass/style.scss */
+.userlist li.expanded form input {
+  width: 80%;
+}
+
+/* line 404, ../../../components/sass/style.scss */
+.userlist li.expanded .btn-love {
+  background-color: #C61C6F;
+}
+
+/* line 408, ../../../components/sass/style.scss */
+.userlist .buttons {
+  display: block;
+  float: left;
+  text-align: left;
+  margin-right: 5px;
+}
+
+/* line 415, ../../../components/sass/style.scss */
+.userlist .info {
+  display: block;
+  float: left;
+  text-align: left;
+}
+
+@media all and (max-width: 600px) {
+  /* line 422, ../../../components/sass/style.scss */
+  .userlist li {
+    width: 100%;
+  }
+
+  /* line 426, ../../../components/sass/style.scss */
+  .userlist .info {
+    width: 70%;
+  }
+}
+/* line 431, ../../../components/sass/style.scss */
+ul.awardslist {
+  margin-top: 5px;
+}
+
+/* line 435, ../../../components/sass/style.scss */
+ul.awardslist li {
+  width: auto;
+  padding: 5px 5px 0 10px;
+  margin: 2px;
+  background-color: #797979;
+  color: white;
+  font-weight: normal;
+  border-radius: 4px;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+/* line 446, ../../../components/sass/style.scss */
+ul.awardslist li:hover {
+  background-color: #F5974E;
+}
+
+/* line 450, ../../../components/sass/style.scss */
+ul.awardslist li .btn-delete {
+  background-color: transparent;
+  background-size: 15px 15px;
+  background-position: center 40%;
+  margin: 0;
+  border: none;
+}
+
+/* line 458, ../../../components/sass/style.scss */
+ul.awardslist li .award {
+  padding-right: 15px;
+}
+
+/* line 462, ../../../components/sass/style.scss */
+nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* line 468, ../../../components/sass/style.scss */
+.branding {
+  float: left;
+  margin: 20px;
+}
+
+/* line 473, ../../../components/sass/style.scss */
+.branding a {
+  width: 80%;
+  font-size: 1.6em;
+  text-align: left;
+  color: #1B7998;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* line 482, ../../../components/sass/style.scss */
+.branding a:hover {
+  color: none;
+}
+
+/* line 487, ../../../components/sass/style.scss */
+nav ul {
+  width: 60%;
+  float: right;
+}
+
+/* line 492, ../../../components/sass/style.scss */
+nav ul li {
+  float: right;
+  color: #145266;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+/* line 500, ../../../components/sass/style.scss */
+nav ul li.user {
+  background-color: #D24244;
+  color: #EFC94C;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+}
+
+/* line 506, ../../../components/sass/style.scss */
+nav ul li.user.hello {
+  margin-left: 60px;
+  padding: 10px 15px;
+}
+
+/* line 511, ../../../components/sass/style.scss */
+nav ul li a {
+  float: left;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+/* line 518, ../../../components/sass/style.scss */
+nav li a:hover {
+  color: #E76C5A;
+}
+
+/* line 522, ../../../components/sass/style.scss */
+.userinfo {
+  text-align: center;
+  font-family: Lato, 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  padding-bottom: 5px;
+}
+
+/* line 528, ../../../components/sass/style.scss */
+.userinfo a {
+  color: #2D8BCF;
+}
+
+/* line 532, ../../../components/sass/style.scss */
+.userinfo input {
+  width: auto;
+}
+
+/* line 536, ../../../components/sass/style.scss */
+.addmeeting {
+  width: 100%;
+}
+
+/* line 540, ../../../components/sass/style.scss */
+.addmeeting .inputwrapper {
+  margin-right: 80px;
+}
+
+/* line 544, ../../../components/sass/style.scss */
+.addmeeting .inputwrapper input {
+  float: left;
+  width: 100%;
+}
+
+/* line 549, ../../../components/sass/style.scss */
+.addmeeting button {
+  width: 60px;
+  margin-left: 20px;
+  vertical-align: center;
+}
+
+/* line 555, ../../../components/sass/style.scss */
+.meetings {
+  padding-top: 10px;
+}
+
+/* line 559, ../../../components/sass/style.scss */
+.meetings h2 {
+  padding-bottom: 5px;
+}
+
+/* line 563, ../../../components/sass/style.scss */
+.meetings .meeting {
+  display: inline-block;
+  padding: 10px 20px 10px 15px;
+  margin: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid #C5C5C5;
+}
+
+/* line 573, ../../../components/sass/style.scss */
+.meetings .meeting .btn {
+  margin-right: 4px;
+  padding: 1px 8px;
+}
+
+/* line 578, ../../../components/sass/style.scss */
+.meetings .meeting .text {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 583, ../../../components/sass/style.scss */
+.meetings .meeting .text a {
+  text-decoration: none;
+}
+
+/* line 587, ../../../components/sass/style.scss */
+.tooltip {
+  position: relative;
+}
+
+/* line 591, ../../../components/sass/style.scss */
+.tooltip span {
+  background: #FFF;
+  color: #000;
+  font-size: .8em;
+  bottom: 100%;
+  display: block;
+  left: -20px;
+  opacity: 0;
+  padding: 2px 13px;
+  margin-bottom: 5px;
+  pointer-events: none;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #C5C5C5;
+  -webkit-transform: translateY(25px);
+  -moz-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  -o-transform: translateY(25px);
+  transform: translateY(25px);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+/* line 618, ../../../components/sass/style.scss */
+.tooltip:hover span {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* line 628, ../../../components/sass/style.scss */
+.checkinslist {
+  margin-top: 20px;
+}
+
+/* line 629, ../../../components/sass/style.scss */
+.checkinslist h1 {
+  color: #2D8BCF;
+}
+
+/* line 630, ../../../components/sass/style.scss */
+.checkin h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 634, ../../../components/sass/style.scss */
+.checkin .btn {
+  padding: 0;
+  margin: 0 3px;
+}
+
+/* line 639, ../../../components/sass/style.scss */
+.checkinslist h3 {
+  color: #657B83;
+}
+
+/* line 641, ../../../components/sass/style.scss */
+input.ng-invalid.ng-touched {
+  border: 1px solid #DA3637;
+}
+
+/* line 645, ../../../components/sass/style.scss */
+input.ng-valid.ng-touched {
+  border: 1px solid #509D12;
+}
+
+/* line 649, ../../../components/sass/style.scss */
+.ng-invalid .btn {
+  background: gray;
+}
+
+/* line 653, ../../../components/sass/style.scss */
+.error {
+  color: red;
+  padding-bottom: 10px;
 }
