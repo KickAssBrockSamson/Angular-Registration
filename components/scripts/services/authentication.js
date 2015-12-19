@@ -17,14 +17,13 @@ myApp.factory('Authentication',
     }
   });
 
-
   var myObject = {
     login: function(user) {
       auth.$authWithPassword({
         email: user.email,
         password: user.password
       }).then(function(regUser) {
-        $location.path('/success');
+        $location.path('/meetings');
       }).catch(function(error) {
        $rootScope.message = error.message;
       });
