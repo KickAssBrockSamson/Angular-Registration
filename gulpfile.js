@@ -33,10 +33,6 @@ if (env==='development') {
 
 coffeeSources = ['components/coffee/tagline.coffee'];
 jsSources = [
-  'components/scripts/rclick.js',
-  'components/scripts/pixgrid.js',
-  'components/scripts/tagline.js',
-  'components/scripts/template.js',
   // Angular
   'components/angular/angular.js',
   'components/angular/angular-animate.js',
@@ -45,9 +41,11 @@ jsSources = [
 
   // My Angular Files
   'components/scripts/app.js',
+  // - Angular Services
   'components/scripts/services/authentication.js',
+  // - Angulr Controllers
   'components/scripts/controllers/registration.js',
-  'components/scripts/controllers/success.js'
+  'components/scripts/controllers/meetings.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
