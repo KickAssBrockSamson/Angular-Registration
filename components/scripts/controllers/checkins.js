@@ -1,23 +1,31 @@
 myApp.controller('CheckInsController', 
-  ['$scope', '$rootScope', '$firebaseObject', '$firebaseArray','$routeParams', 'FIREBASE_URL',
-  function($scope, $rootScope, $firebaseObject, $firebaseArray, $routeParams, FIREBASE_URL) {
+  ['$scope', '$rootScope', '$location', '$firebaseObject', '$firebaseArray','$routeParams', 'FIREBASE_URL',
+  function($scope, $rootScope, $location, $firebaseObject, $firebaseArray, $routeParams, FIREBASE_URL) {
 
     $scope.whichmeeting = $routeParams.mId;
     $scope.whichuser = $routeParams.uId;
 
-    var ref = new firebase(FIREBASE_URL + 'users/' + $scope.whichuser + '/meetings/' + $scope.whichmeeting + '/checkins'); 
+    var ref = new Firebase(FIREBASE_URL + 'users/' +
+      $scope.whichuser + '/meetings/' +
+      $scope.whichmeeting + '/checkins');
+
+    var checkinsList = $firebaseArray(ref);
+    $scope.checkins = checkinsList;
 
     $scope.addCheckin = function() {
-      var checkinsInfo = $firebaseArray(ref);
-      var myData = {
-        firstname : $scope.user,
-        lastname : $scope.user.lastname,
-        email: $scope.user.email,
-        date: firebase.SeverValue.TIMESTAMP
-      }; // myData
+     var checkinsInfo = $firebaseArray(ref);
+     var myData = {
+      firstname: $scope.user.firstname,
+      lastname: $scope.user.lastname,
+      email: $scope.user.email,
+      date: Firebase.ServerValue.TIMESTAMP
+     }; //myData
 
-      checkinsInfo.$add(myData);
+     checkinsInfo.$add(myData).then(function() {
+      $location.path('/checkins/' + $scope.whichuser + '/' +
+        $scope.whichmeeting + '/checkinsList');
+     }); //Send data to Firebase
 
-    }; //Add Checkin
+    }; //AddCheckin
 
-}]); //Controller    
+}]); //Controller 
