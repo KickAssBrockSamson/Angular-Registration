@@ -43,9 +43,10 @@ jsSources = [
   'components/scripts/app.js',
   // - Angular Services
   'components/scripts/services/authentication.js',
-  // - Angulr Controllers
+  // - Angular Controllers
   'components/scripts/controllers/registration.js',
-  'components/scripts/controllers/meetings.js'
+  'components/scripts/controllers/meetings.js',
+  'components/scripts/controllers/checkins.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
