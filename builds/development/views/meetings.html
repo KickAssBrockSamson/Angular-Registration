@@ -6,14 +6,22 @@
   </div><!-- Text Intro -->
 
   <form class="formgroup addmeeting cf" ng-submit="addMeeting()" novalidate>
+    
     <div class="inputwrapper">
       <input type="text" name="meetingname" placeholder="Meeting name" ng-model="meetingname" ng-required="true">
-      <button type="submit" class="btn" ng-dsiabled="myform.$invalid">+</button>
     </div>
+    
+    <button type="submit" class="btn" ng-dsiabled="myform.$invalid">+</button>
+  
   </form>
 
   <h2>Your Meetings</h2>
     <div class="meeting" ng-repeat="(key, meeting) in meetings">
+    
+      <button class="btn btn-delete tooltip" ng-click="deleteMeeting(key)">
+        <span>Delete this meeting</span>
+      </button> 
+
       <span class="text">{{meeting.name}}</span>
     </div>
 
