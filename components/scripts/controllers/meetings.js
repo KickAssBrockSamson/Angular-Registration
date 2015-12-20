@@ -1,8 +1,9 @@
-myApp.controller('MeetingsController', ['$scope', '$rootScope', '$firebaseArray', 'FIREBASE_ARRAY',
-  function($scope, $rootScope, $firebaseArray, FIREBASE_ARRAY) {
+myApp.controller('MeetingsController', 
+  ['$scope', '$rootScope', '$firebaseAuth', '$firebaseArray', 'FIREBASE_URL',
+  function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_URL) {
 
-  var ref = new Firebase(FIREBASE_ARRAY);
-  var auth = $firebaseAuth(ref);
+    var ref = new Firebase(FIREBASE_URL);
+    var auth = $firebaseAuth(ref);
 
   auth.$onAuth(function(authUser){
     if (authUser) {
@@ -11,6 +12,15 @@ myApp.controller('MeetingsController', ['$scope', '$rootScope', '$firebaseArray'
       var meetingsInfo = $firebaseArray(meetingsRef);
       $scope.meetings = meetingsInfo;
 
+      meetingsInfo.$loaded().then(function(data) {
+        $rootScope.howManyMeetings = meetingsInfo.length;
+      }); // Make sure meeting data is loaded
+
+      meetingsInfo.$watch(function(data) {
+        $rootScope.howManyMeetings = meetingsInfo.length;
+      }); // Make sure meeting data is loaded
+
+      // Add Meeting Method
       $scope.addMeeting = function() {
         meetingsInfo.$add({
           name: $scope.meetingname,
@@ -18,7 +28,14 @@ myApp.controller('MeetingsController', ['$scope', '$rootScope', '$firebaseArray'
         }).then(function(){
           $scope.meetingname = '';
         }); // promise
-      } // addMeeting
+      }; // addMeeting
+
+      // Delete Meeting Method
+      $scope.deleteMeeting = function(key) {
+        meetingsInfo.$remove(key);
+      } // Delte Meeting
+
+
     } // User Authenticated
   }); // on Auth
 
