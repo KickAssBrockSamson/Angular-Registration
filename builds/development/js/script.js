@@ -34782,7 +34782,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 
 var myApp = angular.module('myApp',
   ['ngRoute', 'firebase'])
-  .constant('FIREBASE_URL', 'https://angularjs-data-app.firebaseio.com/');
+  .constant('FIREBASE_URL', 'https://angdata77.firebaseIO.com/');
 
 
 myApp.run(['$rootScope', '$location',
@@ -34806,6 +34806,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'views/register.html',
       controller: 'RegistrationController'
     }).
+    when('/checkins/:uId/:mId', {
+      templateUrl: 'views/checkins.html',
+      controller: 'CheckInsController'
+    }).
     when('/meetings', {
       templateUrl: 'views/meetings.html',
       controller: 'MeetingsController',
@@ -34819,7 +34823,6 @@ myApp.config(['$routeProvider', function($routeProvider) {
       redirectTo: '/login'
     });
 }]);
-
 myApp.factory('Authentication', 
   ['$rootScope', '$firebaseAuth', '$firebaseObject',
   '$location', 'FIREBASE_URL',
@@ -34945,4 +34948,9 @@ myApp.controller('MeetingsController',
 
 }]); // Controller
 
+myApp.controller('CheckInsController', 
+  ['$scope', '$rootScope', '$firebaseObject', '$firebaseArray','$routeParams', 'FIREBASE_URL',
+  function($scope, $rootScope, $firebaseObject, $firebaseArray, $routeParams, FIREBASE_URL) {
+
+}]); //Controller    
 },{}]},{},[1])
