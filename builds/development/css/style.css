@@ -70,13 +70,13 @@ body {
   font-size: 1.1em;
 }
 
-/* line 9, ../../../components/sass/_base.scss */
+/* line 10, ../../../components/sass/_base.scss */
 #content {
   color: #CC8E94;
   font-size: 2em;
 }
 
-/* line 14, ../../../components/sass/_base.scss */
+/* line 15, ../../../components/sass/_base.scss */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -84,32 +84,32 @@ body {
   position: relative;
 }
 
-/* line 21, ../../../components/sass/_base.scss */
+/* line 22, ../../../components/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Patua One", sans-serif;
   font-size: 3em;
 }
 
-/* line 26, ../../../components/sass/_base.scss */
+/* line 27, ../../../components/sass/_base.scss */
 h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #507356;
 }
 @media (max-width: 700px) {
-  /* line 26, ../../../components/sass/_base.scss */
+  /* line 27, ../../../components/sass/_base.scss */
   h1 {
     font-size: 2.2em;
   }
 }
 
-/* line 36, ../../../components/sass/_base.scss */
+/* line 37, ../../../components/sass/_base.scss */
 h2 {
   font-size: 1.5em;
   color: #3E2B3D;
 }
 
-/* line 41, ../../../components/sass/_base.scss */
+/* line 42, ../../../components/sass/_base.scss */
 p {
   font-size: 1.3em;
   line-height: 1.5em;
@@ -118,7 +118,7 @@ p {
   margin-top: 15px;
 }
 
-/* line 49, ../../../components/sass/_base.scss */
+/* line 50, ../../../components/sass/_base.scss */
 section {
   padding: 20px 0;
 }
